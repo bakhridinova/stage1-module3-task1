@@ -3,7 +3,7 @@ package com.epam.mjc.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Generics<T> {
+public class Generics {
 
     //TODO: Refactor Method-1
     public List<List<String>> boxingMethod(String name) {
@@ -20,8 +20,7 @@ public class Generics<T> {
     }
 
     //TODO: Refactor Method-3
-    public void cloneMethod(List consumer, List producer) {
+    public <T>void cloneMethod(List<? super T> consumer, List<? extends T> producer) {
         consumer.addAll(producer);
     }
-
 }
